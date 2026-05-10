@@ -10,6 +10,10 @@ app.set('views', path.join(__dirname, 'views'));
 // Serve static files
 app.use(express.static(path.join(__dirname, 'public')));
 
+// Body parsing middleware
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+
 // Routes
 const indexRoutes = require('./routes/index');
 app.use('/', indexRoutes);

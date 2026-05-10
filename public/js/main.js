@@ -36,16 +36,17 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // --- 2. Global Scroll Reveal ---
-  const revealElements = document.querySelectorAll('h1, h2, h3, .card, .info-card, .education-card, p, .btn, .orbit-section');
-  revealElements.forEach(el => el.classList.add('reveal-init'));
+  // Only observe elements that already have the .reveal class in HTML
+  const revealElements = document.querySelectorAll('.reveal');
 
   const revealObserver = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
         entry.target.classList.add('active');
+        revealObserver.unobserve(entry.target);
       }
     });
-  }, { threshold: 0.1 });
+  }, { threshold: 0.05 });
 
   revealElements.forEach(el => revealObserver.observe(el));
 
