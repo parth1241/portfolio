@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <%- include('partials/head') %>
+</head>
+<body>
+  <%- include('partials/nav') %>
+
+  <main class="skills-page">
+    <div class="container">
+      <div style="text-align: center; margin-bottom: 60px;">
+        <span class="section-tag">// TECH STACK</span>
+        <h1 style="font-size: 3rem;">Core <span class="accent">Architecture</span></h1>
+      </div>
+
+      <!-- 3D Orbit Ring -->
+      <section class="orbit-section reveal">
+        <div class="orbit-container">
+          <div class="orbit-core">STACK</div>
+          
+          <% 
+            const skills = [
+              { name: 'python', color: '#3776AB' },
+              { name: 'react', color: '#61DAFB' },
+              { name: 'nextdotjs', color: '#ffffff' },
+              { name: 'nodedotjs', color: '#339933' },
+              { name: 'docker', color: '#2496ED' },
+              { name: 'git', color: '#F05032' },
+              { name: 'linux', color: '#FCC624' },
+              { name: 'stellar', color: '#000000' }
+            ];
+            
+            skills.forEach((skill, index) => { 
+              const angle = (360 / skills.length) * index;
+          %>
+            <div class="orbit-item" style="transform: rotateY(<%= angle %>deg) translateZ(300px);">
+              <div class="skill-icon-card floating-<%= index % 2 === 0 ? 'fast' : 'delayed' %>" style="--brand-color: <%= skill.color %>">
+                <div class="icon-3d-wrap js-3d-icon" data-color="<%= skill.color %>">
+                  <img src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/<%= skill.name %>.svg" alt="<%= skill.name %>">
+                </div>
+                <span class="skill-name"><%= skill.name.toUpperCase() %></span>
+              </div>
+            </div>
+          <% }); %>
+        </div>
+      </section>
+
+      <!-- Category Grid -->
+      <section class="skills-grid-section reveal">
+        <div class="category-grid">
+          <!-- Technical -->
+          <div class="category-column">
+            <h3>Technical Expertise</h3>
+            <div class="skill-pills">
+              <% ['Python', 'React', 'Next.js', 'Node.js', 'Web3/Blockchain', 'Stellar Network', 'Linux', 'Docker', 'Git/GitHub', 'REST APIs', 'HTML5/CSS3', 'JavaScript'].forEach(s => { %>
+                <span class="skill-pill"><%= s %></span>
+              <% }); %>
+            </div>
+          </div>
+
+          <!-- Soft Skills -->
+          <div class="category-column">
+            <h3>Operational DNA</h3>
+            <div class="skill-pills">
+              <% ['Leadership', 'Event Management', 'Problem Solving', 'Cross-functional Collab'].forEach(s => { %>
+                <span class="skill-pill" style="--brand-color: var(--neon-green)"><%= s %></span>
+              <% }); %>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <%- include('partials/footer') %>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // Anime.js 3D Icon Rotation Logic
+      anime({
+        targets: '.js-3d-icon',
+        rotateY: '1turn',
+        duration: 3000,
+        easing: 'linear',
+        loop: true,
+        delay: anime.stagger(200)
+      });
+
+      // Smooth 3D Orbit using Anime.js for better performance/easing
+      // Note: We keep the CSS animation as fallback, but JS can enhance it
+      /*
+      anime({
+        targets: '.orbit-container',
+        rotateY: '360deg',
+        duration: 30000,
+        easing: 'linear',
+        loop: true
+      });
+      */
+    });
+  </script>
+</body>
+</html>

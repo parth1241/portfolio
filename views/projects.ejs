@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <%- include('partials/head') %>
+</head>
+<body>
+  <%- include('partials/nav') %>
+
+  <main class="projects-page">
+    <div class="container">
+      <div style="text-align: center; margin-bottom: 60px;">
+        <span class="section-tag">// PORTFOLIO</span>
+        <h1 style="font-size: 3rem;">Deployed <span class="accent">Infrastructures</span></h1>
+      </div>
+
+      <!-- Featured Project: TrustCert -->
+      <section class="featured-project reveal">
+        <div class="trustcert-card glass">
+          <div class="project-header">
+            <h2 style="font-size: 2.5rem; color: var(--text-main);">TrustCert</h2>
+            <div class="live-badge">
+              <span class="live-dot"></span>
+              LIVE
+            </div>
+          </div>
+          
+          <p class="project-subtitle">Blockchain Certificate Issuance Platform</p>
+          
+          <div class="skill-pills" style="margin-bottom: 30px;">
+            <span class="skill-pill" style="--brand-color: #61DAFB;">Next.js</span>
+            <span class="skill-pill" style="--brand-color: #61DAFB;">React</span>
+            <span class="skill-pill" style="--brand-color: #08B5E5;">Stellar</span>
+            <span class="skill-pill" style="--brand-color: #2496ED;">Docker</span>
+            <span class="skill-pill" style="--brand-color: #ffffff;">Vercel</span>
+            <span class="skill-pill" style="--brand-color: #00fff5;">CI/CD</span>
+          </div>
+
+          <ul class="project-achievements">
+            <li>Architected and deployed a secure, decentralized platform for tamper-proof educational certificates.</li>
+            <li>Integrated Stellar blockchain to ensure 100% immutability and verifiable ownership of credentials.</li>
+            <li>Optimized frontend performance and state management, achieving a 40% reduction in load times.</li>
+            <li>Implemented Docker-based containerization and automated CI/CD pipelines for seamless deployment.</li>
+          </ul>
+
+          <div class="hero-btns">
+            <a href="https://trustcert-beta.vercel.app" target="_blank" class="btn btn-primary">View Live ↗</a>
+            <a href="https://github.com/parth1241" target="_blank" class="btn btn-secondary">GitHub ↗</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- More Projects / Placeholders -->
+      <section>
+        <h3 style="margin-bottom: 30px; color: var(--text-dim); font-size: 1rem;">// ARCHIVE & UPCOMING</h3>
+        <div class="coming-soon-grid">
+          <div class="placeholder-card glass reveal">
+            <h3>🔒 In Development</h3>
+            <p style="font-family: 'Space Mono', monospace; font-size: 0.8rem; color: var(--text-dim); margin-top: 10px;">DECENTRALIZED EXCHANGE ENGINE</p>
+          </div>
+          <div class="placeholder-card glass reveal" style="transition-delay: 0.1s;">
+            <h3>🔒 In Development</h3>
+            <p style="font-family: 'Space Mono', monospace; font-size: 0.8rem; color: var(--text-dim); margin-top: 10px;">IOT SMART GRID INTEGRATION</p>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <%- include('partials/footer') %>
+
+  <script>
+    // Reveal animation observer
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('active');
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+  </script>
+</body>
+</html>

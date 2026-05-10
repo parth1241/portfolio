@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <%- include('partials/head') %>
+</head>
+<body>
+  <canvas id="particle-canvas"></canvas>
+  <%- include('partials/nav') %>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-container">
+        <div class="hero-content">
+          <h1 class="glitch" data-text="PARTH KARAN">PARTH KARAN</h1>
+          <span id="typewriter"></span>
+          <div class="hero-btns">
+            <a href="/projects" class="btn btn-primary">View Projects</a>
+            <a href="/contact" class="btn btn-secondary">Get In Touch</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="stats-section">
+      <div class="container stats-container">
+        <div class="stat-item">
+          <h2 class="stat-counter" data-goal="1" data-suffix="">0</h2>
+          <p>Projects Shipped</p>
+        </div>
+        <div class="stat-item">
+          <h2 class="stat-counter" data-goal="80" data-suffix="%">0%</h2>
+          <p>Workflow Time Saved</p>
+        </div>
+        <div class="stat-item">
+          <h2 class="stat-counter" data-goal="100" data-suffix="+">0+</h2>
+          <p>Event Attendees Led</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <%- include('partials/footer') %>
+</body>
+</html>

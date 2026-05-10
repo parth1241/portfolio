@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <%- include('partials/head') %>
+</head>
+<body>
+  <%- include('partials/nav') %>
+
+  <main>
+    <section class="about-section">
+      <div class="container">
+        <div class="about-grid">
+          <!-- Left Column -->
+          <div class="about-text reveal">
+            <span class="section-tag">// ABOUT ME</span>
+            <h1>Building at the intersection of <span class="accent">hardware & web3</span></h1>
+            
+            <div class="about-bio">
+              <p>Electrical Engineering undergrad at Thapar Institute of Engineering and Technology (Expected 2029). Strong in Full-Stack Web3 development, decentralised app architecture, and blockchain systems.</p>
+              <p>I combine hardware-domain analytical thinking with modern software engineering. Experienced in Python automation, Docker DevOps, and Stellar blockchain development.</p>
+            </div>
+
+            <div class="education-card glass reveal">
+              <h3>Education</h3>
+              <div class="education-details">
+                <p><strong>B.Tech Electrical Engineering</strong></p>
+                <p>Thapar Institute of Engineering and Technology</p>
+                <p>2025 — 2029 (Expected)</p>
+                
+                <div class="courses-list">
+                  <span class="course-tag">Circuit Theory</span>
+                  <span class="course-tag">Power Systems</span>
+                  <span class="course-tag">Signals & Systems</span>
+                  <span class="course-tag">Microprocessors</span>
+                  <span class="course-tag">Eng. Mathematics</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Column -->
+          <div class="info-cards-column">
+            <div class="info-card glass reveal slide-right">
+              <div class="info-icon">🎓</div>
+              <div class="info-content">
+                <h4>DEGREE</h4>
+                <p>B.Tech EE — Thapar Institute</p>
+              </div>
+            </div>
+
+            <div class="info-card glass reveal slide-right" style="transition-delay: 0.1s;">
+              <div class="info-icon">📍</div>
+              <div class="info-content">
+                <h4>LOCATION</h4>
+                <p>Panchkula, Haryana, India</p>
+              </div>
+            </div>
+
+            <div class="info-card glass reveal slide-right" style="transition-delay: 0.2s;">
+              <div class="info-icon">💼</div>
+              <div class="info-content">
+                <h4>AVAILABILITY</h4>
+                <p>Open to: Internships & Freelance</p>
+              </div>
+            </div>
+
+            <div class="info-card glass reveal slide-right" style="transition-delay: 0.3s;">
+              <div class="info-icon">🌐</div>
+              <div class="info-content">
+                <h4>LANGUAGES</h4>
+                <p>English (Prof.), Hindi (Native)</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <%- include('partials/footer') %>
+
+  <script>
+    // Reveal animation observer for About Page
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('active');
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+  </script>
+</body>
+</html>
