@@ -7,16 +7,23 @@
   <%- include('partials/nav') %>
 
   <main class="skills-page">
-    <div class="container">
+    <!-- Animated Grid Background -->
+    <div class="digital-grid"></div>
+
+    <div class="container" style="position: relative; z-index: 2;">
       <div style="text-align: center; margin-bottom: 60px;">
         <span class="section-tag">// TECH STACK</span>
-        <h1 style="font-size: 3rem;">Core <span class="accent">Architecture</span></h1>
+        <h1 style="font-size: 3.5rem;">Neural <span class="accent">Architecture</span></h1>
+        <p style="color: var(--text-dim); max-width: 600px; margin: 20px auto;">Integrating high-performance hardware logic with decentralized blockchain infrastructure.</p>
       </div>
 
       <!-- 3D Orbit Ring -->
       <section class="orbit-section reveal">
         <div class="orbit-container">
-          <div class="orbit-core">STACK</div>
+          <div class="orbit-core">
+            <div class="core-inner">CORE</div>
+            <div class="core-glow"></div>
+          </div>
           
           <% 
             const skills = [
@@ -33,8 +40,8 @@
             skills.forEach((skill, index) => { 
               const angle = (360 / skills.length) * index;
           %>
-            <div class="orbit-item" style="transform: rotateY(<%= angle %>deg) translateZ(300px);">
-              <div class="skill-icon-card floating-<%= index % 2 === 0 ? 'fast' : 'delayed' %>" style="--brand-color: <%= skill.color %>">
+            <div class="orbit-item" style="transform: rotateY(<%= angle %>deg) translateZ(320px);">
+              <div class="skill-icon-card js-skill-card" style="--brand-color: <%= skill.color %>">
                 <div class="icon-3d-wrap js-3d-icon" data-color="<%= skill.color %>">
                   <img src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/<%= skill.name %>.svg" alt="<%= skill.name %>">
                 </div>
@@ -45,27 +52,70 @@
         </div>
       </section>
 
-      <!-- Category Grid -->
-      <section class="skills-grid-section reveal">
-        <div class="category-grid">
-          <!-- Technical -->
-          <div class="category-column">
-            <h3>Technical Expertise</h3>
-            <div class="skill-pills">
-              <% ['Python', 'React', 'Next.js', 'Node.js', 'Web3/Blockchain', 'Stellar Network', 'Linux', 'Docker', 'Git/GitHub', 'REST APIs', 'HTML5/CSS3', 'JavaScript'].forEach(s => { %>
-                <span class="skill-pill"><%= s %></span>
+      <!-- Advanced Data Scanners -->
+      <section class="scanners-section reveal">
+        <div class="scanner-grid">
+          <div class="scanner-column">
+            <h3 class="scanner-title">// CORE ENGINE</h3>
+            <div class="proficiency-scanners">
+              <% [
+                { s: 'Python / Automation', p: 95 },
+                { s: 'React / Next.js', p: 90 },
+                { s: 'Node.js / Express', p: 85 },
+                { s: 'Docker / DevOps', p: 80 }
+              ].forEach(item => { %>
+                <div class="scanner-item">
+                  <div class="scanner-label">
+                    <span><%= item.s %></span>
+                    <span><%= item.p %>%</span>
+                  </div>
+                  <div class="scanner-bar-wrap">
+                    <div class="scanner-bar" style="--percent: <%= item.p %>%"></div>
+                  </div>
+                </div>
               <% }); %>
             </div>
           </div>
 
-          <!-- Soft Skills -->
-          <div class="category-column">
-            <h3>Operational DNA</h3>
-            <div class="skill-pills">
-              <% ['Leadership', 'Event Management', 'Problem Solving', 'Cross-functional Collab'].forEach(s => { %>
-                <span class="skill-pill" style="--brand-color: var(--neon-green)"><%= s %></span>
+          <div class="scanner-column">
+            <h3 class="scanner-title">// DECENTRALIZED STACK</h3>
+            <div class="proficiency-scanners">
+              <% [
+                { s: 'Stellar Blockchain', p: 88 },
+                { s: 'Smart Contracts', p: 82 },
+                { s: 'Web3 Architecture', p: 85 },
+                { s: 'Security Auditing', p: 75 }
+              ].forEach(item => { %>
+                <div class="scanner-item">
+                  <div class="scanner-label">
+                    <span><%= item.s %></span>
+                    <span><%= item.p %>%</span>
+                  </div>
+                  <div class="scanner-bar-wrap">
+                    <div class="scanner-bar" style="--percent: <%= item.p %>%"></div>
+                  </div>
+                </div>
               <% }); %>
             </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- System Terminal -->
+      <section class="terminal-section reveal">
+        <div class="system-terminal">
+          <div class="terminal-header">
+            <span class="dot red"></span>
+            <span class="dot yellow"></span>
+            <span class="dot green"></span>
+            <span class="terminal-title">DIAGNOSTIC_CONSOLE.SH</span>
+          </div>
+          <div class="terminal-body" id="terminal-output">
+            <p>> INITIALIZING SYSTEM SCAN...</p>
+            <p>> HARDWARE INTERFACE: OPTIMIZED</p>
+            <p>> BLOCKCHAIN CONNECTIVITY: SECURE</p>
+            <p>> STACK INTEGRITY: 100%</p>
+            <p class="blink">> SYSTEM READY_</p>
           </div>
         </div>
       </section>
