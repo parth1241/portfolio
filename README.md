@@ -4,6 +4,10 @@ A high-fidelity, interactive portfolio built for the future of the web. Featurin
 
 ![Banner](https://img.shields.io/badge/Theme-Neon_Void-bf00ff?style=for-the-badge)
 ![Status](https://img.shields.io/badge/Status-Live-00fff5?style=for-the-badge)
+![Live Demo](https://img.shields.io/badge/Live_Demo-Link-00fff5?style=for-the-badge&logo=vercel&logoColor=white&link=https://portfolio-omega-two-zo2df1e9xh.vercel.app/)
+
+## 🌐 Live Application
+👉 **[View Live Site](https://portfolio-omega-two-zo2df1e9xh.vercel.app/)**
 
 ## 🚀 Tech Stack
 
