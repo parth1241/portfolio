@@ -1350,3 +1350,55 @@ textarea.contact-input {
   50% { opacity: 0; }
 }
 
+
+/* --- System Manifest Styles --- */
+
+.manifest-section {
+  margin-top: 80px;
+}
+
+.manifest-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 25px;
+  margin-top: 30px;
+}
+
+.manifest-card {
+  padding: 25px;
+  border-left: 2px solid var(--neon-cyan);
+  transition: var(--transition);
+}
+
+.manifest-card:hover {
+  background: rgba(0, 255, 245, 0.08);
+  transform: translateX(10px);
+  border-left-color: var(--neon-purple);
+}
+
+.manifest-header {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+.manifest-header img {
+  width: 24px;
+  height: 24px;
+  filter: drop-shadow(0 0 5px var(--neon-cyan));
+}
+
+.manifest-header h4 {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1rem;
+  color: var(--text-main);
+}
+
+.manifest-card p {
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 0.9rem;
+  color: var(--text-dim);
+  line-height: 1.5;
+}
+

@@ -52,7 +52,33 @@
         </div>
       </section>
 
-      <!-- Advanced Data Scanners -->
+      <!-- System Manifest: Detailed Descriptions -->
+      <section class="manifest-section reveal">
+        <h3 class="scanner-title">// SYSTEM MANIFEST</h3>
+        <div class="manifest-grid">
+          <% 
+            const details = [
+              { name: 'Python', desc: 'Scalable automation, backend scripting, and high-performance data engineering.', icon: 'python' },
+              { name: 'React', desc: 'Modern UI/UX development with sophisticated state management and interactive components.', icon: 'react' },
+              { name: 'Next.js', desc: 'Full-stack application architecture with SEO-optimized server-side rendering.', icon: 'nextdotjs' },
+              { name: 'Node.js', desc: 'Building robust, event-driven backend services and real-time API infrastructures.', icon: 'nodedotjs' },
+              { name: 'Docker', desc: 'Enterprise-grade containerization and streamlined DevOps deployment cycles.', icon: 'docker' },
+              { name: 'Git', desc: 'Advanced version control, collaborative workflows, and multi-branch management.', icon: 'git' },
+              { name: 'Linux', desc: 'Professional system administration and high-security server environment management.', icon: 'linux' },
+              { name: 'Stellar', desc: 'Blockchain protocol integration and decentralized financial application development.', icon: 'stellar' }
+            ];
+            details.forEach(item => {
+          %>
+            <div class="manifest-card glass">
+              <div class="manifest-header">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/<%= item.icon %>.svg" alt="<%= item.name %>">
+                <h4><%= item.name %></h4>
+              </div>
+              <p><%= item.desc %></p>
+            </div>
+          <% }); %>
+        </div>
+      </section>
       <section class="scanners-section reveal">
         <div class="scanner-grid">
           <div class="scanner-column">
