@@ -8,6 +8,7 @@ const PORT = process.env.PORT || 3000;
 
 // Serve static assets
 app.use(express.static(path.join(__dirname, 'public')));
+app.use('/assets', express.static(path.join(__dirname, 'assets')));
 
 // Serve views (static HTML)
 app.get('/', (req, res) => {
