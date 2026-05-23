@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>Parth Karan — Full-Stack & Web3 Engineer</title>
+  <meta name="description" content="Electrical Engineering undergrad at Thapar Institute. Building production‑grade Web3 and Full‑Stack apps — including TrustCert on the Stellar blockchain." />
+  <meta property="og:title" content="Parth Karan — Full-Stack & Web3 Engineer" />
+  <meta property="og:description" content="Electrical Engineering undergrad at Thapar Institute. Building production‑grade Web3 and Full‑Stack apps — including TrustCert on the Stellar blockchain." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="http://localhost:3000/" />
+  <meta property="og:image" content="/assets/og-image.jpg" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600;700&family=DM+Mono:wght@300;400&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/css/style.css" />
+</head>
+<body>
+
+  <!-- Preloader -->
+  <div id="preloader">
+    <div id="preloader-text">
+      <span class="preloader-name">Parth Karan</span>
+      <span class="preloader-percent">0%</span>
+    </div>
+    <div id="preloader-bar"><div id="preloader-bar-fill"></div></div>
+  </div>
+
+  <!-- Full-screen canvas background -->
+  <canvas id="canvas"></canvas>
+
+  <!-- Scroll progress indicator -->
+  <div id="scroll-progress"><div id="scroll-progress-fill"></div></div>
+
+  <!-- Fixed Navbar -->
+  <nav id="site-nav">
+    <div class="logo">PK</div>
+    <button class="hire-btn" id="hire-btn">Available for work</button>
+  </nav>
+
+  <!-- Dot navigation -->
+  <ul class="nav-dots" id="nav-dots">
+    <li data-index="0" class="active"><span>Hero</span></li>
+    <li data-index="1"><span>About</span></li>
+    <li data-index="2"><span>Work</span></li>
+    <li data-index="3"><span>Stack</span></li>
+    <li data-index="4"><span>Contact</span></li>
+  </ul>
+
+  <!-- Horizontal scroll scene -->
+  <div id="scene">
+
+    <!-- 01 · Hero -->
+    <section id="hero" class="section">
+      <div class="section-inner hero-inner">
+        <p class="hero-kicker anim-item">Portfolio 2025</p>
+        <h1 class="hero-name anim-item">
+          <span class="char-wrap"><span>P</span><span>a</span><span>r</span><span>t</span><span>h</span></span>
+          <span class="char-wrap"><span>K</span><span>a</span><span>r</span><span>a</span><span>n</span></span>
+        </h1>
+        <h2 class="hero-tagline anim-item">Full-Stack &amp; Web3 Engineer</h2>
+        <p class="scroll-hint anim-item">scroll to explore</p>
+      </div>
+    </section>
+
+    <!-- 02 · About -->
+    <section id="about" class="section">
+      <div class="section-inner">
+        <span class="section-label anim-item">01 / About</span>
+        <h2 class="section-title anim-item">Who I Am</h2>
+        <p class="about-text anim-item">I'm an Electrical Engineering undergrad at <strong>Thapar Institute</strong> who lives at the intersection of hardware and software. I build production‑grade full‑stack and Web3 applications — obsessing over clean architecture, minimal design, and blazing‑fast performance.</p>
+        <div class="about-skills anim-item">
+          <span>JavaScript</span><span class="dot">·</span>
+          <span>Node.js</span><span class="dot">·</span>
+          <span>React</span><span class="dot">·</span>
+          <span>Next.js</span><span class="dot">·</span>
+          <span>Stellar</span><span class="dot">·</span>
+          <span>Docker</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- 03 · Work -->
+    <section id="work" class="section">
+      <div class="section-inner">
+        <span class="section-label anim-item">02 / Work</span>
+        <h2 class="section-title anim-item">Selected Projects</h2>
+        <div class="card anim-item">
+          <div class="card-header">
+            <span class="card-number">01</span>
+            <h3 class="card-title">TrustCert</h3>
+          </div>
+          <h4 class="card-subtitle">Blockchain Certificate Issuance Platform</h4>
+          <p class="card-desc">End‑to‑end decentralised certificate issuance and verification on the Stellar blockchain — eliminating centralised certificate authorities.</p>
+          <div class="card-tags">
+            <span class="pill">Next.js</span>
+            <span class="pill">React</span>
+            <span class="pill">Stellar</span>
+            <span class="pill">Docker</span>
+            <span class="pill">Vercel</span>
+            <span class="pill">Web3</span>
+          </div>
+          <a class="card-link" href="https://trustcert-beta.vercel.app" target="_blank" rel="noopener">Visit Project →</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 04 · Stack -->
+    <section id="stack" class="section">
+      <div class="section-inner">
+        <span class="section-label anim-item">03 / Stack</span>
+        <h2 class="section-title anim-item">Technologies</h2>
+        <div class="tag-cloud anim-item">
+          <div class="tag-group">
+            <h3 class="tag-group-title">Languages</h3>
+            <div class="tag-row">
+              <span class="tag">Python</span>
+              <span class="tag">JavaScript</span>
+              <span class="tag">HTML5</span>
+              <span class="tag">CSS3</span>
+            </div>
+          </div>
+          <div class="tag-group">
+            <h3 class="tag-group-title">Frameworks &amp; Libraries</h3>
+            <div class="tag-row">
+              <span class="tag">React</span>
+              <span class="tag">Next.js</span>
+              <span class="tag">Node.js</span>
+            </div>
+          </div>
+          <div class="tag-group">
+            <h3 class="tag-group-title">Blockchain &amp; Web3</h3>
+            <div class="tag-row">
+              <span class="tag">Stellar Network</span>
+              <span class="tag">Smart Contracts</span>
+              <span class="tag">dApp Architecture</span>
+            </div>
+          </div>
+          <div class="tag-group">
+            <h3 class="tag-group-title">DevOps &amp; Tools</h3>
+            <div class="tag-row">
+              <span class="tag">Docker</span>
+              <span class="tag">Git</span>
+              <span class="tag">GitHub</span>
+              <span class="tag">Linux</span>
+              <span class="tag">REST APIs</span>
+              <span class="tag">Vercel</span>
+              <span class="tag">CI/CD</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 05 · Contact -->
+    <section id="contact" class="section">
+      <div class="section-inner">
+        <h2 class="finale-line anim-item">Let's build<br/>something.</h2>
+        <div class="contact-details anim-item">
+          <p class="contact-row">
+            <a href="mailto:erparthkaran@gmail.com" class="email-link" id="email-link">erparthkaran@gmail.com</a>
+            <button class="copy-btn" id="copy-email" aria-label="Copy email">📋</button>
+          </p>
+          <p class="contact-row">+91 73558‑02729</p>
+          <p class="contact-row contact-location">Panchkula, Haryana, India</p>
+        </div>
+        <footer class="contact-footer anim-item">
+          <a href="https://github.com/pshenok" target="_blank" rel="noopener" class="footer-link">GitHub</a>
+          <span class="footer-sep">/</span>
+          <a href="https://linkedin.com/in/parth-karan-7a241537a" target="_blank" rel="noopener" class="footer-link">LinkedIn</a>
+          <span class="footer-sep">/</span>
+          <a href="/assets/cv.pdf" target="_blank" class="footer-link">Resume</a>
+        </footer>
+      </div>
+    </section>
+
+  </div>
+
+  <!-- Section number watermark (injected by JS) -->
+
+  <script src="/js/main.js"></script>
+</body>
+</html>
